@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace CW5AdapterPractice
 {
+    // Implements the IToybear interface
     class TeddyBear : IToyBear
     {
         public void hug()
@@ -20,6 +21,7 @@ namespace CW5AdapterPractice
         }
     }
 
+    // Implements the IBear interface
     class Grizzly : IBear
     {
         public void maul()
@@ -33,14 +35,17 @@ namespace CW5AdapterPractice
         }
     }
 
-    class BearAdapter
+    // The adapter that implements the IToyBear interface and adapts the Bear interface
+    class BearAdapter : IToyBear
     {
         IBear adaptedBear;
+        // member variable, adaptee
 
         BearAdapter(IBear b)
         {
             adaptedBear = b;
         }
+        // Parameterized constructor
 
         public void hug()
         {
