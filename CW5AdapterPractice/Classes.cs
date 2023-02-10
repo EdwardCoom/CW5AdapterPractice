@@ -41,7 +41,7 @@ namespace CW5AdapterPractice
         IBear adaptedBear;
         // member variable, adaptee
 
-        BearAdapter(IBear b)
+        public BearAdapter(IBear b)
         {
             adaptedBear = b;
         }
