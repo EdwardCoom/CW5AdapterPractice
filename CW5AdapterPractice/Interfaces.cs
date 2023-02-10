@@ -2,7 +2,7 @@
 // Date: 2/9/2023
 // Assignment: CW5: Adapter Practice!
 // Class: 352
-// Description: C# Code for Adapter, Main program implementation file 
+// Description: C# Code for Adapter, Interfaces File  
 
 using System;
 using System.Collections.Generic;
@@ -12,11 +12,14 @@ using System.Threading.Tasks;
 
 namespace CW5AdapterPractice
 {
-    class Program
+    interface IToyBear
     {
-        static void Main(string[] args)
-        {
+        void hug();
+    }
 
-        }
+    interface IBear
+    {
+        void maul();
+        void hibernate();
     }
 }
